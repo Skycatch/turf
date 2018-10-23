@@ -80,6 +80,8 @@ export function coordEach(geojson, callback, excludeWrapCoord) {
             switch (geomType) {
             case null:
                 break;
+            case undefined:
+                break;
             case 'Point':
                 if (callback(coords, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
                 coordIndex++;
